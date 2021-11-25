@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="mrp_merge_picking_form_view" model="ir.ui.view">
+		<field name="name">mrp.merge.picking.wizard.form</field>
+		<field name="model">mrp.merge.picking.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Periodic Purchase Report">
+				<group>
+					<group>
+						<field name="is_merge_pick"/>
+					</group>
+					<group>
+						<field name="is_two_steps"/>
+					</group>
+				</group>
+				<footer>
+                    <button name="confirmed_mrp_order" type="object" string="Confirmed MRP" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+			</form>
+		</field>
+	</record>
+
+	<act_window
+        name="Confirm Order"
+        id="pways_conforim_order"
+        res_model="mrp.merge.picking.wizard"
+        binding_model="mrp.production"
+        binding_views="list"
+        view_mode="form"
+        target="new"
+        />
+</odoo>
