@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-03-16 11:46+0000\n"
+"PO-Revision-Date: 2021-03-10 18:45+0000\n"
 "Last-Translator: Ana Suárez <ana.suarez@qubiq.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -30,9 +30,6 @@ msgid ""
 "                This Record needs to be\n"
 "                validated."
 msgstr ""
-"<i class=\"fa fa-info-circle\"/>\n"
-"                Este registro debe ser\n"
-"                validado."
 
 #. module: base_tier_validation
 #: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_label
@@ -42,10 +39,6 @@ msgid ""
 "                <b>rejected</b>\n"
 "                ."
 msgstr ""
-"<i class=\"fa fa-thumbs-down\"/>\n"
-"                La operación ha sido\n"
-"                <b>rechazada</b>\n"
-"                ."
 
 #. module: base_tier_validation
 #: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_label
@@ -55,10 +48,6 @@ msgid ""
 "                <b>validated</b>\n"
 "                !"
 msgstr ""
-"<i class=\"fa fa-thumbs-up\"/>\n"
-"                La operación ha sido\n"
-"                <b>validada</b>\n"
-"                !"
 
 #. module: base_tier_validation
 #: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_form
@@ -126,13 +115,13 @@ msgstr ""
 #. module: base_tier_validation
 #: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_form
 msgid "Apply On"
-msgstr "Aplicar en"
+msgstr ""
 
 #. module: base_tier_validation
 #: model:ir.model.fields,help:base_tier_validation.field_tier_definition__approve_sequence
 #: model:ir.model.fields,help:base_tier_validation.field_tier_review__approve_sequence
 msgid "Approval order by the specified sequence number"
-msgstr "Orden de aprobación por el número de secuencia especificado"
+msgstr "Órden de aprobación por el número de secuencia especificado"
 
 #. module: base_tier_validation
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__approve_sequence
@@ -157,7 +146,7 @@ msgid ""
 "Can review will be marked if the review is pending and the\n"
 "        approve sequence has been achieved"
 msgstr ""
-"Puede revisar será establecido si la revisión está pendiente y la\n"
+"Puede revisar se marcará si la revisión está pendiente y la\n"
 "        secuencia de aprobación se ha alcanzado"
 
 #. module: base_tier_validation
@@ -175,7 +164,7 @@ msgstr "Cancelar"
 #: model_terms:ir.ui.view,arch_db:base_tier_validation.view_comment_wizard
 #, python-format
 msgid "Comment"
-msgstr "Comentar"
+msgstr "Comentario"
 
 #. module: base_tier_validation
 #: model:ir.model,name:base_tier_validation.model_comment_wizard
@@ -192,11 +181,6 @@ msgstr "Comentarios"
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__company_id
 msgid "Company"
 msgstr "Compañía"
-
-#. module: base_tier_validation
-#: model:ir.model,name:base_tier_validation.model_res_config_settings
-msgid "Config Settings"
-msgstr ""
 
 #. module: base_tier_validation
 #: model:ir.model.fields,field_description:base_tier_validation.field_comment_wizard__create_uid
@@ -234,8 +218,6 @@ msgstr "Descripción"
 
 #. module: base_tier_validation
 #: model:ir.model.fields,field_description:base_tier_validation.field_comment_wizard__display_name
-#: model:ir.model.fields,field_description:base_tier_validation.field_res_config_settings__display_name
-#: model:ir.model.fields,field_description:base_tier_validation.field_res_users__display_name
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__display_name
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__display_name
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__display_name
@@ -266,7 +248,7 @@ msgstr ""
 
 #. module: base_tier_validation
 #: code:addons/base_tier_validation/models/tier_review.py:0
-#, python-format
+#, fuzzy, python-format
 msgid "Group %s"
 msgstr "Grupo %s"
 
@@ -282,8 +264,6 @@ msgstr "Ha comentado"
 
 #. module: base_tier_validation
 #: model:ir.model.fields,field_description:base_tier_validation.field_comment_wizard__id
-#: model:ir.model.fields,field_description:base_tier_validation.field_res_config_settings__id
-#: model:ir.model.fields,field_description:base_tier_validation.field_res_users__id
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__id
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__id
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__id
@@ -302,8 +282,6 @@ msgstr ""
 
 #. module: base_tier_validation
 #: model:ir.model.fields,field_description:base_tier_validation.field_comment_wizard____last_update
-#: model:ir.model.fields,field_description:base_tier_validation.field_res_config_settings____last_update
-#: model:ir.model.fields,field_description:base_tier_validation.field_res_users____last_update
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition____last_update
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_review____last_update
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation____last_update
@@ -333,11 +311,6 @@ msgstr "Modelo"
 #. module: base_tier_validation
 #: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_form
 msgid "More Options"
-msgstr "Más opciones"
-
-#. module: base_tier_validation
-#: model_terms:ir.ui.view,arch_db:base_tier_validation.res_config_settings_view_form_budget
-msgid "More reports about tier validations, i.e., summary of all my reviews"
 msgstr ""
 
 #. module: base_tier_validation
@@ -376,21 +349,6 @@ msgid "Notify Reviewers on Creation"
 msgstr "Notificar validadores en la creación"
 
 #. module: base_tier_validation
-#: model_terms:ir.ui.view,arch_db:base_tier_validation.res_config_settings_view_form_budget
-msgid "Option to forward a tier validation to other reviewer, and backward"
-msgstr ""
-
-#. module: base_tier_validation
-#: model_terms:ir.ui.view,arch_db:base_tier_validation.res_config_settings_view_form_budget
-msgid "Option to trigger server actions on completion of tier reviews"
-msgstr ""
-
-#. module: base_tier_validation
-#: model_terms:ir.ui.view,arch_db:base_tier_validation.res_config_settings_view_form_budget
-msgid "Option to use python formula to get reviewers and find documents"
-msgstr ""
-
-#. module: base_tier_validation
 #. openerp-web
 #: code:addons/base_tier_validation/static/src/xml/systray.xml:0
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_review__status__pending
@@ -406,7 +364,7 @@ msgstr "Modelo referenciado"
 #. module: base_tier_validation
 #: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_label
 msgid "Reject"
-msgstr "Rechazar"
+msgstr ""
 
 #. module: base_tier_validation
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__rejected
@@ -427,7 +385,7 @@ msgstr "Modelo del Documento Relacionado"
 #. module: base_tier_validation
 #: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_buttons
 msgid "Request Validation"
-msgstr "Solicitar validación"
+msgstr ""
 
 #. module: base_tier_validation
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__requested_by
@@ -455,9 +413,8 @@ msgstr "Modelo"
 
 #. module: base_tier_validation
 #: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_validation_buttons
-#, fuzzy
 msgid "Restart Validation"
-msgstr "Volver a empezar validación"
+msgstr ""
 
 #. module: base_tier_validation
 #. openerp-web
@@ -529,12 +486,6 @@ msgid "The operation is under validation."
 msgstr "Esta operación está en proceso de validación."
 
 #. module: base_tier_validation
-#: code:addons/base_tier_validation/models/tier_validation.py:0
-#, python-format
-msgid "The review has been reset by %s."
-msgstr ""
-
-#. module: base_tier_validation
 #: code:addons/base_tier_validation/models/tier_review.py:0
 #, python-format
 msgid "There are no res.users in the selected field"
@@ -559,35 +510,10 @@ msgid "Tier Definition"
 msgstr "Definición de Nivel"
 
 #. module: base_tier_validation
-#: model:ir.model.fields,field_description:base_tier_validation.field_res_config_settings__module_base_tier_validation_formula
-msgid "Tier Formula"
-msgstr ""
-
-#. module: base_tier_validation
-#: model:ir.model.fields,field_description:base_tier_validation.field_res_config_settings__module_base_tier_validation_forward
-msgid "Tier Forward & Backward"
-msgstr ""
-
-#. module: base_tier_validation
-#: model:ir.model.fields,field_description:base_tier_validation.field_res_config_settings__module_base_tier_validation_report
-msgid "Tier Reports"
-msgstr ""
-
-#. module: base_tier_validation
 #: model:ir.model,name:base_tier_validation.model_tier_review
 #: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_review_view_tree
 msgid "Tier Review"
 msgstr "Revisión de Nivel"
-
-#. module: base_tier_validation
-#: model:ir.model.fields,field_description:base_tier_validation.field_res_config_settings__module_base_tier_validation_server_action
-msgid "Tier Server Action"
-msgstr ""
-
-#. module: base_tier_validation
-#: model_terms:ir.ui.view,arch_db:base_tier_validation.res_config_settings_view_form_budget
-msgid "Tier Validation"
-msgstr ""
 
 #. module: base_tier_validation
 #: model:ir.model,name:base_tier_validation.model_tier_validation
@@ -609,11 +535,6 @@ msgstr "Validaciones de Nivel (abstracto)"
 #. module: base_tier_validation
 #: model:mail.message.subtype,name:base_tier_validation.mt_tier_validation_requested
 msgid "Tier Validation Requested"
-msgstr ""
-
-#. module: base_tier_validation
-#: model:mail.message.subtype,name:base_tier_validation.mt_tier_validation_restarted
-msgid "Tier Validation Restarted"
 msgstr ""
 
 #. module: base_tier_validation
@@ -683,15 +604,15 @@ msgstr "Validaciones"
 msgid "e.g. Tier Validation for..."
 msgstr "ej. Validación de Nivel por..."
 
+#~ msgid "Any user in a specific group."
+#~ msgstr "Cualquier usuario en el grupo especificado."
+
 #~ msgid ""
 #~ "This action needs to be validated for at least one record. \n"
 #~ "Please request a validation."
 #~ msgstr ""
 #~ "Esta acción necesita ser validada para algún registro.\n"
 #~ "Por favor, solicita una validación."
-
-#~ msgid "Any user in a specific group."
-#~ msgstr "Cualquier usuario en el grupo especificado."
 
 #~ msgid "Tier"
 #~ msgstr "Nivel"

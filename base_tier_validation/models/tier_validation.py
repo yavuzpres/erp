@@ -168,9 +168,6 @@ class TierValidation(models.AbstractModel):
 
     def _compute_need_validation(self):
         for rec in self:
-            if isinstance(rec.id, models.NewId):
-                rec.need_validation = False
-                continue
             tiers = self.env["tier.definition"].search([("model", "=", self._name)])
             valid_tiers = any([rec.evaluate_tier(tier) for tier in tiers])
             rec.need_validation = (
@@ -198,15 +195,6 @@ class TierValidation(models.AbstractModel):
             if val not in exceptions:
                 return False
         return True
-
-    def _check_tier_state_transition(self, vals):
-        """
-        Check we are in origin state and not destination state
-        """
-        self.ensure_one()
-        return getattr(self, self._state_field) in self._state_from and not vals.get(
-            self._state_field
-        ) in (self._state_to + [self._cancel_state])
 
     def write(self, vals):
         for rec in self:
@@ -236,7 +224,9 @@ class TierValidation(models.AbstractModel):
                     )
             if (
                 rec.review_ids
-                and rec._check_tier_state_transition(vals)
+                and getattr(rec, self._state_field) in self._state_from
+                and not vals.get(self._state_field)
+                in (self._state_to + [self._cancel_state])
                 and not rec._check_allow_write_under_validation(vals)
             ):
                 raise ValidationError(_("The operation is under validation."))
@@ -277,15 +267,12 @@ class TierValidation(models.AbstractModel):
     def _get_rejected_notification_subtype(self):
         return "base_tier_validation.mt_tier_validation_rejected"
 
-    def _get_restarted_notification_subtype(self):
-        return "base_tier_validation.mt_tier_validation_restarted"
-
     def _notify_accepted_reviews(self):
         post = "message_post"
         if hasattr(self, post):
             # Notify state change
             getattr(self.sudo(), post)(
-                subtype_xmlid=self._get_accepted_notification_subtype(),
+                subtype=self._get_accepted_notification_subtype(),
                 body=self._notify_accepted_reviews_body(),
             )
 
@@ -350,7 +337,7 @@ class TierValidation(models.AbstractModel):
         if hasattr(self, post):
             # Notify state change
             getattr(self.sudo(), post)(
-                subtype_xmlid=self._get_rejected_notification_subtype(),
+                subtype=self._get_rejected_notification_subtype(),
                 body=self._notify_rejected_review_body(),
             )
 
@@ -387,7 +374,7 @@ class TierValidation(models.AbstractModel):
                     partner_ids=users_to_notify.mapped("partner_id").ids
                 )
                 getattr(rec, post)(
-                    subtype_xmlid=self._get_requested_notification_subtype(),
+                    subtype=self._get_requested_notification_subtype(),
                     body=rec._notify_requested_review_body(),
                 )
 
@@ -417,23 +404,11 @@ class TierValidation(models.AbstractModel):
         self._notify_review_requested(created_trs)
         return created_trs
 
-    def _notify_restarted_review_body(self):
-        return _("The review has been reset by %s.") % (self.env.user.name)
-
-    def _notify_restarted_review(self):
-        post = "message_post"
-        if hasattr(self, post):
-            getattr(self.sudo(), post)(
-                subtype_xmlid=self._get_restarted_notification_subtype(),
-                body=self._notify_restarted_review_body(),
-            )
-
     def restart_validation(self):
         for rec in self:
             if getattr(rec, self._state_field) in self._state_from:
                 rec.mapped("review_ids").unlink()
                 self._update_counter()
-            rec._notify_restarted_review()
 
     @api.model
     def _update_counter(self):
@@ -462,20 +437,20 @@ class TierValidation(models.AbstractModel):
             }
             for node in doc.xpath(self._tier_validation_buttons_xpath):
                 # By default, after the last button of the header
-                str_element = self.env["ir.qweb"]._render(
+                str_element = self.env["ir.qweb"].render(
                     "base_tier_validation.tier_validation_buttons", params
                 )
                 new_node = etree.fromstring(str_element)
                 for new_element in new_node:
                     node.addnext(new_element)
             for node in doc.xpath("/form/sheet"):
-                str_element = self.env["ir.qweb"]._render(
+                str_element = self.env["ir.qweb"].render(
                     "base_tier_validation.tier_validation_label", params
                 )
                 new_node = etree.fromstring(str_element)
                 for new_element in new_node:
                     node.addprevious(new_element)
-                str_element = self.env["ir.qweb"]._render(
+                str_element = self.env["ir.qweb"].render(
                     "base_tier_validation.tier_validation_reviews", params
                 )
                 node.addnext(etree.fromstring(str_element))
@@ -484,7 +459,7 @@ class TierValidation(models.AbstractModel):
             # Override context for postprocessing
             if view_id and res.get("base_model", self._name) != self._name:
                 View = View.with_context(base_model_name=res["base_model"])
-            new_arch, new_fields = View.postprocess_and_fields(doc, self._name)
+            new_arch, new_fields = View.postprocess_and_fields(self._name, doc, view_id)
             res["arch"] = new_arch
             # We don't want to loose previous configuration, so, we only want to add
             # the new fields

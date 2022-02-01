@@ -119,8 +119,8 @@ msgstr "Hepsi"
 
 #. module: base_tier_validation
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_definition__review_type__group
-msgid "Any user in a specific group."
-msgstr "Belli bir gruptaki herhangi bir kullanıcı."
+msgid "Any user in a specific group"
+msgstr "Belli bir gruptaki herhangi bir kullanıcı"
 
 #. module: base_tier_validation
 #: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_definition_view_form
@@ -191,11 +191,6 @@ msgstr "Yorumlar"
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__company_id
 msgid "Company"
 msgstr "Firma"
-
-#. module: base_tier_validation
-#: model:ir.model,name:base_tier_validation.model_res_config_settings
-msgid "Config Settings"
-msgstr "Konfigürasyon Ayarları"
 
 #. module: base_tier_validation
 #: model:ir.model.fields,field_description:base_tier_validation.field_comment_wizard__create_uid
@@ -328,11 +323,6 @@ msgid "More Options"
 msgstr "Daha Fazla Seçenek"
 
 #. module: base_tier_validation
-#: model_terms:ir.ui.view,arch_db:base_tier_validation.res_config_settings_view_form_budget
-msgid "More reports about tier validations, i.e., summary of all my reviews"
-msgstr "Katman onaylarıyla ilgili daha fazla rapor, örn. tüm değerlendirmelerimin özeti"
-
-#. module: base_tier_validation
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__need_validation
 msgid "Need Validation"
 msgstr "Onay Gerektirir"
@@ -365,21 +355,6 @@ msgstr "Yapılacak değerlendirme yok."
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__notify_on_create
 msgid "Notify Reviewers on Creation"
 msgstr "Oluşunca Değerlendirenleri Bilgilendir"
-
-#. module: base_tier_validation
-#: model_terms:ir.ui.view,arch_db:base_tier_validation.res_config_settings_view_form_budget
-msgid "Option to forward a tier validation to other reviewer, and backward"
-msgstr "Bir katman onayını diğer değerlendirene iletme ve değerlendiriciden geri alma seçeneği"
-
-#. module: base_tier_validation
-#: model_terms:ir.ui.view,arch_db:base_tier_validation.res_config_settings_view_form_budget
-msgid "Option to trigger server actions on completion of tier reviews"
-msgstr "Katman değerlendirmeleri tamamlanınca sunucu işlemlerini tetikleme seçeneği"
-
-#. module: base_tier_validation
-#: model_terms:ir.ui.view,arch_db:base_tier_validation.res_config_settings_view_form_budget
-msgid "Option to use python formula to get reviewers and find documents"
-msgstr "Değerlendirenleri almak ve dökümanları bulmak için python formülü kullanma seçeneği"
 
 #. module: base_tier_validation
 #. openerp-web
@@ -465,7 +440,7 @@ msgstr "Değerlendiren"
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__reviewer_field_id
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__reviewer_field_id
 msgid "Reviewer field"
-msgstr "Değerlendiren alanı"
+msgstr "Değerlendirici alanı"
 
 #. module: base_tier_validation
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__reviewer_group_id
@@ -516,12 +491,6 @@ msgid "The operation is under validation."
 msgstr "İşlem onayda."
 
 #. module: base_tier_validation
-#: code:addons/base_tier_validation/models/tier_validation.py:0
-#, python-format
-msgid "The review has been reset by %s."
-msgstr "Değerlendirme %s tarafından sıfırlandı."
-
-#. module: base_tier_validation
 #: code:addons/base_tier_validation/models/tier_review.py:0
 #, python-format
 msgid "There are no res.users in the selected field"
@@ -554,35 +523,10 @@ msgid "Tier Definition"
 msgstr "Katman Tanımı"
 
 #. module: base_tier_validation
-#: model:ir.model.fields,field_description:base_tier_validation.field_res_config_settings__module_base_tier_validation_formula
-msgid "Tier Formula"
-msgstr "Katman Formülü"
-
-#. module: base_tier_validation
-#: model:ir.model.fields,field_description:base_tier_validation.field_res_config_settings__module_base_tier_validation_forward
-msgid "Tier Forward & Backward"
-msgstr "Katman İleri & Geri"
-
-#. module: base_tier_validation
-#: model:ir.model.fields,field_description:base_tier_validation.field_res_config_settings__module_base_tier_validation_report
-msgid "Tier Reports"
-msgstr "Katman Raporları"
-
-#. module: base_tier_validation
 #: model:ir.model,name:base_tier_validation.model_tier_review
 #: model_terms:ir.ui.view,arch_db:base_tier_validation.tier_review_view_tree
 msgid "Tier Review"
 msgstr "Katman Değerlendirme"
-
-#. module: base_tier_validation
-#: model:ir.model.fields,field_description:base_tier_validation.field_res_config_settings__module_base_tier_validation_server_action
-msgid "Tier Server Action"
-msgstr "Katman Sunucu İşlemleri"
-
-#. module: base_tier_validation
-#: model_terms:ir.ui.view,arch_db:base_tier_validation.res_config_settings_view_form_budget
-msgid "Tier Validation"
-msgstr "Katman Onaylama"
 
 #. module: base_tier_validation
 #: model:ir.model,name:base_tier_validation.model_tier_validation

@@ -48,8 +48,7 @@ class TierDefinition(models.Model):
         domain="[('id', 'in', valid_reviewer_field_ids)]",
     )
     valid_reviewer_field_ids = fields.One2many(
-        comodel_name="ir.model.fields",
-        compute="_compute_domain_reviewer_field",
+        comodel_name="ir.model.fields", compute="_compute_domain_reviewer_field",
     )
     definition_type = fields.Selection(
         string="Definition", selection=[("domain", "Domain")], default="domain"
