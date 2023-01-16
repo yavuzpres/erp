@@ -7,7 +7,7 @@
     'website': 'http://www.yavuzpres.com.tr',
     'license': 'AGPL-3',
     'depends': [
-        'sale',
+        'sale', 'sale_stock'
     ],
     'data': [
         'views/sale_order_view.xml',
