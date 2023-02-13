@@ -24,3 +24,8 @@ msgstr "Üretilen Miktar"
 #: model:ir.model,name:yavuzpres_mrp.model_mrp_production
 msgid "Production Order"
 msgstr "Üretim Emri"
+
+#. module: yavuzpres_mrp
+#: model:ir.model.fields,field_description:yavuzpres_mrp.field_mrp_production__qty_remaining
+msgid "Quantity To Be Produced"
+msgstr "Kalan Miktar"
