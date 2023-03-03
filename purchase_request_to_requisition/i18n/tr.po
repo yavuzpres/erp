@@ -1,0 +1,340 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_request_to_requisition
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-24 16:39+0000\n"
+"PO-Revision-Date: 2023-02-24 16:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_request_to_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.view_purchase_request_line_make_purchase_requisition
+msgid ""
+"<i class=\"fa fa-info-circle\"/>\n"
+"                            The selected lines from a Purchase Request not approved were removed."
+msgstr ""
+"<i class=\"fa fa-info-circle\"/>\n"
+"                            Onaylanmayan bir Satın Alma İsteğinden seçilen satırlar kaldırıldı."
+
+#. module: purchase_request_to_requisition
+#: code:addons/purchase_request_to_requisition/models/purchase_requisition.py:0
+#, python-format
+msgid "<li><b>%s</b>: Total bid quantity %s %s</li>"
+msgstr "<li><b>%s</b>: Toplam teklif miktarı %s %s</li>"
+
+#. module: purchase_request_to_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.purchase_request_line_search
+msgid "At least a Draft Bid has been created"
+msgstr "En az bir Teklif Taslağı oluşturuldu"
+
+#. module: purchase_request_to_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.purchase_request_line_search
+msgid "At least a PO has been confirmed"
+msgstr "En az bir PO onaylandı"
+
+#. module: purchase_request_to_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.purchase_request_line_search
+msgid "At least one of the Bids has been completed"
+msgstr "Tekliflerden en az biri tamamlandı"
+
+#. module: purchase_request_to_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.purchase_request_line_search
+msgid "Bid Sent to Suppliers"
+msgstr "Tedarikçilere Gönderilen Teklif"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line__requisition_state
+msgid "Bid Status"
+msgstr "Teklif Durumu"
+
+#. module: purchase_request_to_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.purchase_request_line_search
+msgid "Bid completed"
+msgstr "Teklif Tamamlandı"
+
+#. module: purchase_request_to_requisition
+#: code:addons/purchase_request_to_requisition/models/purchase_requisition.py:0
+#, python-format
+msgid "Bid confirmation %s for your Request %s"
+msgstr "Teklif onayı %s talebiniz için %s"
+
+#. module: purchase_request_to_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.view_purchase_request_line_make_purchase_requisition
+msgid "Cancel"
+msgstr "İptal"
+
+#. module: purchase_request_to_requisition
+#: model:ir.actions.act_window,name:purchase_request_to_requisition.action_purchase_request_line_make_purchase_requisition
+#: model:ir.actions.act_window,name:purchase_request_to_requisition.action_purchase_request_make_purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.view_purchase_request_line_make_purchase_requisition
+msgid "Create Purchase Agreements"
+msgstr "Satın Alma Sözleşmesi Oluşturun"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition__create_uid
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition_item__create_uid
+msgid "Created by"
+msgstr "Oluşturan"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition__create_date
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition_item__create_date
+msgid "Created on"
+msgstr "Oluşturulma"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition_item__name
+msgid "Description"
+msgstr "Açıklama"
+
+#. module: purchase_request_to_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.view_purchase_request_line_make_purchase_requisition
+msgid "Details"
+msgstr "Detaylar"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition__display_name
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition_item__display_name
+msgid "Display Name"
+msgstr "Görünüm Adı"
+
+#. module: purchase_request_to_requisition
+#: code:addons/purchase_request_to_requisition/wizard/purchase_request_line_make_purchase_requisition.py:0
+#, python-format
+msgid "Enter a positive quantity."
+msgstr "Pozitif bir miktar girin."
+
+#. module: purchase_request_to_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.view_purchase_request_line_make_purchase_requisition
+msgid "Existing draft purchase agreement to update:"
+msgstr "Güncellenecek mevcut satın alma sözleşmesi taslağı:"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_requisition_line__has_purchase_request_lines
+msgid "Has Purchase Request Lines"
+msgstr "Satın Alma Talebi Satırları Var"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition__id
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition_item__id
+msgid "ID"
+msgstr ""
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line__is_editable
+msgid "Is editable"
+msgstr "Düzenlenebilir mi?"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition__item_ids
+msgid "Items"
+msgstr "Kalemler"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition____last_update
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition_item____last_update
+msgid "Last Modified on"
+msgstr "Son Düzenleme"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition__write_uid
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition_item__write_uid
+msgid "Last Updated by"
+msgstr "Son Güncelleyen"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition__write_date
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition_item__write_date
+msgid "Last Updated on"
+msgstr "Son Güncelleme"
+
+#. module: purchase_request_to_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.purchase_request_line_search
+msgid "New Bid"
+msgstr "Yeni Teklif"
+
+#. module: purchase_request_to_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.purchase_request_line_search
+msgid "No Bid"
+msgstr "Teklif Yok"
+
+#. module: purchase_request_to_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.purchase_request_line_search
+msgid "No Bid has been created"
+msgstr "Oluşturulan Teklif Yok"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition__not_approved_lines
+msgid "Not Approved Lines"
+msgstr "Onaylanmayan Satırlar"
+
+#. module: purchase_request_to_requisition
+#: code:addons/purchase_request_to_requisition/models/product.py:0
+#, python-format
+msgid "Only one selection of Purchase Request or Purchase Agreement allowed"
+msgstr ""
+"Yalnızca bir Satın Alma İsteği veya Satın Alma Sözleşmesi seçimine izin "
+"verilir"
+
+#. module: purchase_request_to_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.view_purchase_requisition_form
+msgid "PR Lines"
+msgstr "PR Satırları"
+
+#. module: purchase_request_to_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.view_purchase_requisition_form
+msgid "PRs"
+msgstr ""
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition_item__product_id
+msgid "Product"
+msgstr "Ürün"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model,name:purchase_request_to_requisition.model_product_template
+msgid "Product Template"
+msgstr "Ürün Şablonu"
+
+#. module: purchase_request_to_requisition
+#: code:addons/purchase_request_to_requisition/wizard/purchase_request_line_make_purchase_requisition.py:0
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition__purchase_requisition_id
+#, python-format
+msgid "Purchase Agreement"
+msgstr "Satın Alma Sözleşmesi"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line__requisition_lines
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.purchase_request_line_form
+msgid "Purchase Agreement Lines"
+msgstr "Satın Alma Sözleşmesi Satırları"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model,name:purchase_request_to_requisition.model_purchase_request
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition_item__request_id
+msgid "Purchase Request"
+msgstr "Satı Alma Talebi"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_requisition__purchase_request_count
+msgid "Purchase Request Count"
+msgstr "Satın Alma Talebi Sayısı"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model,name:purchase_request_to_requisition.model_purchase_request_line
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition_item__line_id
+msgid "Purchase Request Line"
+msgstr "Satınalma Talebi Satırı"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model,name:purchase_request_to_requisition.model_purchase_request_line_make_purchase_requisition
+msgid "Purchase Request Line Make Purchase Agreement"
+msgstr "Satın Alma Talep Hattını Satın Alma Sözleşmesi Yap"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model,name:purchase_request_to_requisition.model_purchase_request_line_make_purchase_requisition_item
+msgid "Purchase Request Line Make Purchase Agreement Item"
+msgstr "Satın Alma Talebi Satırını Satın Alma Sözleşmesi Kalemi Yap "
+
+#. module: purchase_request_to_requisition
+#: code:addons/purchase_request_to_requisition/models/purchase_requisition.py:0
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_requisition_line__purchase_request_lines
+#, python-format
+msgid "Purchase Request Lines"
+msgstr "Satınalma Talebi Satırları"
+
+#. module: purchase_request_to_requisition
+#: model:ir.actions.act_window,name:purchase_request_to_requisition.action_purchase_purchase_list
+msgid "Purchase Requests"
+msgstr "Satın Alma Talebi"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model,name:purchase_request_to_requisition.model_purchase_requisition
+msgid "Purchase Requisition"
+msgstr "Satınalma İsteği"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model,name:purchase_request_to_requisition.model_purchase_requisition_line
+msgid "Purchase Requisition Line"
+msgstr "Satınalma Talep Satırı"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line__requisition_qty
+msgid "Quantity in a Bid"
+msgstr "Teklifteki Miktar"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition_item__product_qty
+msgid "Quantity to Bid"
+msgstr "Teklif Verilecek Miktar"
+
+#. module: purchase_request_to_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.purchase_request_line_search
+msgid "Request"
+msgstr "Talep"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request__requisition_count
+msgid "Requisition Count"
+msgstr "Talep Sayısı"
+
+#. module: purchase_request_to_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.view_purchase_request_form
+msgid "Requisition Lines"
+msgstr "Talep Satırı"
+
+#. module: purchase_request_to_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.purchase_request_line_search
+msgid "Requisition Status"
+msgstr "Talep Durumu"
+
+#. module: purchase_request_to_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_request_to_requisition.view_purchase_request_form
+msgid "TEs"
+msgstr ""
+
+#. module: purchase_request_to_requisition
+#: code:addons/purchase_request_to_requisition/models/purchase_requisition.py:0
+#, python-format
+msgid ""
+"The following requested items from Purchase Request %s have now being sent "
+"to Suppliers using Purchase Bid %s:"
+msgstr ""
+"Satın Alma İsteğinden aşağıdaki istenen öğeler  %s şimdi gönderiliyor "
+"Satın Alma Teklifini kullanan Tedarikçilere %s:"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition_item__product_uom_id
+msgid "UoM"
+msgstr "UoM"
+
+#. module: purchase_request_to_requisition
+#: model:ir.model.fields,field_description:purchase_request_to_requisition.field_purchase_request_line_make_purchase_requisition_item__wiz_id
+msgid "Wizard"
+msgstr "Sihirbaz"
+
+#. module: purchase_request_to_requisition
+#: code:addons/purchase_request_to_requisition/models/purchase_request.py:0
+#, python-format
+msgid "You cannot delete a record that refers to purchase lines!"
+msgstr "Satınalma sipariş satırlarına bakan bir kaydı silemezsiniz!"
+
+#. module: purchase_request_to_requisition
+#: code:addons/purchase_request_to_requisition/wizard/purchase_request_line_make_purchase_requisition.py:0
+#, python-format
+msgid "You have to select lines from the same company."
+msgstr "Aynı şirkete ait satırları seçmelisiniz."
+
+#. module: purchase_request_to_requisition
+#: code:addons/purchase_request_to_requisition/wizard/purchase_request_line_make_purchase_requisition.py:0
+#, python-format
+msgid "You have to select lines from the same picking type."
+msgstr "Aynı Toplama Türü'nden satırları seçmelisiniz."
