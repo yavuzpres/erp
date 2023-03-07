@@ -23,4 +23,4 @@ msgstr "Satış Siparişi"
 #. module: yavuzpres_sale
 #: model:ir.model.fields,field_description:yavuzpres_sale.field_sale_order__total_qty_ordered
 msgid "Total Ordered Quantity"
-msgstr "Sepet Miktarı"
+msgstr "Toplam Sipariş Edilen Miktar"
