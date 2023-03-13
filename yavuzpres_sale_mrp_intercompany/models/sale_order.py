@@ -27,12 +27,13 @@ class SaleOrder(models.Model):
         for order in self:
             for line in order.order_line.filtered(lambda l: not l.mo_id):
                 bom_id = self.env['mrp.bom'].search([
+                    ('active', '=', True),
                     ('product_tmpl_id', '=', line.product_id.product_tmpl_id.id),
                     ('company_id', '=', dest_company_id.id),
                     '|',
                     ('product_id', '=', line.product_id.id),
                     ('product_id', '=', False),
-                ])
+                ], limit=1)
                 if not bom_id:
                     raise UserError(_('BoM not found for product %s in company %s!'
                                       % (line.product_id.name, dest_company_id.name)))
