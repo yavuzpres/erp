@@ -7,11 +7,13 @@ class MrpProduction(models.Model):
     sale_order_line_id = fields.Many2one(
         comodel_name="sale.order.line",
         string="Source Sale Order Line",
+        readonly=True,
     )
 
-    sale_order_id = fields.Many2one(
+    sale_order_ref = fields.Many2one(
         comodel_name="sale.order",
         string="Source Sale Order",
+        readonly=True,
     )
 
     client = fields.Char(

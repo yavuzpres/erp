@@ -11,7 +11,7 @@
             <xpath expr="//field[@name='origin']" position="after">
                 <field name="parent_client"/>
                 <field name="parent_client_ref"/>
-                <field name="sale_order_id"/>
+                <field name="sale_order_ref"/>
                 <field name="date_source_order"/>
             </xpath>
         </field>
