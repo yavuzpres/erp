@@ -10,8 +10,7 @@ class MrpProduction(models.Model):
         readonly=True,
     )
 
-    sale_order_ref = fields.Many2one(
-        comodel_name="sale.order",
+    sale_order_ref = fields.Char(
         string="Source Sale Order",
         readonly=True,
     )
