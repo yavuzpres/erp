@@ -10,5 +10,6 @@
         'sale_product_multi_add',
     ],
     "data": [
+        "views/sale_view.xml",
     ],
 }
