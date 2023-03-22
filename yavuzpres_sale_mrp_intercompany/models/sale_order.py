@@ -7,10 +7,6 @@ from odoo.exceptions import UserError
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
-    parent_client_ref = fields.Char(
-        string='Teknotel Customer Purchase No',
-    )
-
     def action_create_mo(self):
         self = self.sudo()
         dest_company_id = self.env['res.company'].search([
@@ -37,6 +33,19 @@ class SaleOrder(models.Model):
                 if not bom_id:
                     raise UserError(_('BoM not found for product %s in company %s!'
                                       % (line.product_id.name, dest_company_id.name)))
+
+                client = ''
+                origin = ''
+                parent_client = ''
+                parent_client_ref = ''
+                if order.company_id.id == 1: # Yavuz Pres ise
+                    client = order.partner_id.name
+                    origin = order.client_order_ref
+                elif order.company_id.id == 2: # Teknotel ise
+                    client = order.company_id.name
+                    parent_client = order.partner_id.name
+                    parent_client_ref = order.client_order_ref
+
                 mo_id = self.env['mrp.production'].create({
                     'sale_order_ref': order.name,
                     'sale_order_line_id': line.id,
@@ -49,11 +58,11 @@ class SaleOrder(models.Model):
                     'date_planned_finished': order.commitment_date - relativedelta(days=2) if order.commitment_date else False,
                     'user_id': False,
                     'company_id': dest_company_id.id,
-                    'client': order.company_id.name, #11 x_studio_musteri
-                    # 'origin': order.client_order_ref, #12
-                    'parent_client': order.partner_id.name, #13 x_studio_ust_musteri
-                    'parent_client_ref': order.parent_client_ref, #14 x_studio_ust_musteri_referansi
-                    'date_source_order': order.date_order, #16
+                    'client': client,
+                    'origin': origin,
+                    'parent_client': parent_client,
+                    'parent_client_ref': parent_client_ref,
+                    'date_source_order': order.date_order,
                     'picking_type_id': picking_type_id.id,
                     'location_src_id': picking_type_id.default_location_src_id.id,
                     'location_dest_id': picking_type_id.default_location_dest_id.id,

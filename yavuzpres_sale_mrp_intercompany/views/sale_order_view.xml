@@ -5,9 +5,6 @@
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='sale_order_template_id']" position="after">
-                <field name="parent_client_ref"/>
-            </xpath>
             <xpath expr="//button[@name='action_quotation_send']" position="after">
                 <button name="action_create_mo"
                         states="draft,sent"
