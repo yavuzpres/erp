@@ -7,6 +7,12 @@ from odoo.exceptions import UserError
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
+    mo_created = fields.Boolean(
+        string='MO Created',
+        readonly=True,
+        copy=False,
+    )
+
     def action_create_mo(self):
         self = self.sudo()
         dest_company_id = self.env['res.company'].search([
@@ -69,3 +75,6 @@ class SaleOrder(models.Model):
                 })
                 mo_id._onchange_move_raw()
                 line.mo_id = mo_id
+            if order.order_line.mapped('mo_id'):
+                order.mo_created = True
+                order.message_post(body=_('Manufacturing orders have been created.'))

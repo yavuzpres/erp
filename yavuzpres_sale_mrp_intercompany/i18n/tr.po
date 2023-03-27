@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-10 15:18+0000\n"
-"PO-Revision-Date: 2023-03-10 15:18+0000\n"
+"POT-Creation-Date: 2023-03-24 10:09+0000\n"
+"PO-Revision-Date: 2023-03-24 10:09+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -59,9 +59,20 @@ msgid "Intercompany Sale Manufacturing"
 msgstr "Şirketlerarası Satış Üretim"
 
 #. module: yavuzpres_sale_mrp_intercompany
+#: model:ir.model.fields,field_description:yavuzpres_sale_mrp_intercompany.field_sale_order__mo_created
+msgid "MO Created"
+msgstr "MO Oluşturuldu"
+
+#. module: yavuzpres_sale_mrp_intercompany
 #: model:ir.model.fields,field_description:yavuzpres_sale_mrp_intercompany.field_sale_order_line__mo_id
 msgid "Manufacturing Order"
 msgstr "Üretim Emri"
+
+#. module: yavuzpres_sale_mrp_intercompany
+#: code:addons/yavuzpres_sale_mrp_intercompany/models/sale_order.py:0
+#, python-format
+msgid "Manufacturing orders have been created."
+msgstr "Üretim emirleri oluşturuldu."
 
 #. module: yavuzpres_sale_mrp_intercompany
 #: model:ir.model,name:yavuzpres_sale_mrp_intercompany.model_stock_picking_type
@@ -105,7 +116,6 @@ msgstr "Teknotel Müşteri"
 
 #. module: yavuzpres_sale_mrp_intercompany
 #: model:ir.model.fields,field_description:yavuzpres_sale_mrp_intercompany.field_mrp_production__parent_client_ref
-#: model:ir.model.fields,field_description:yavuzpres_sale_mrp_intercompany.field_sale_order__parent_client_ref
 msgid "Teknotel Customer Purchase No"
 msgstr "Teknotel Müşteri Satınalma No"
 

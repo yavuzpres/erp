@@ -10,6 +10,7 @@ class SaleOrderLine(models.Model):
         comodel_name='mrp.production',
         string='Manufacturing Order',
         readonly=True,
+        copy=False
     )
 
     def unlink(self):

@@ -7,8 +7,7 @@
     'website': 'http://www.yavuzpres.com.tr',
     'license': 'AGPL-3',
     'depends': [
-        'mrp',
-        'sale',
+        'sale_mrp',
     ],
     'data': [
         'views/mrp_production_view.xml',
