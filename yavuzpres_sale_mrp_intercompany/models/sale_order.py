@@ -27,6 +27,8 @@ class SaleOrder(models.Model):
         if not picking_type_id:
             raise UserError(_('Inter-company operation type not found!'))
         for order in self:
+            if not order.commitment_date:
+                raise UserError(_('Commitment date is required for MO creating!'))
             for line in order.order_line.filtered(lambda l: not l.mo_id):
                 bom_id = self.env['mrp.bom'].search([
                     ('active', '=', True),
