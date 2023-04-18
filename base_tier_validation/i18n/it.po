@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-05-02 01:47+0000\n"
-"Last-Translator: Alessandro Fiorino <alessandro.fiorino@digitaldomus.it>\n"
+"PO-Revision-Date: 2023-01-03 12:46+0000\n"
+"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: base_tier_validation
 #. openerp-web
@@ -188,14 +188,14 @@ msgstr "Azienda"
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__create_uid
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__create_uid
 msgid "Created by"
-msgstr "Creata da"
+msgstr "Creato da"
 
 #. module: base_tier_validation
 #: model:ir.model.fields,field_description:base_tier_validation.field_comment_wizard__create_date
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__create_date
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__create_date
 msgid "Created on"
-msgstr "Creata il"
+msgstr "Creato il"
 
 #. module: base_tier_validation
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__definition_type
@@ -348,6 +348,18 @@ msgid "Notify Reviewers on Creation"
 msgstr "Notifica gli approvatori su Creazione"
 
 #. module: base_tier_validation
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+#, python-format
+msgid "Operation has been <b>rejected</b>."
+msgstr ""
+
+#. module: base_tier_validation
+#: code:addons/base_tier_validation/models/tier_validation.py:0
+#, python-format
+msgid "Operation has been <b>validated</b>!"
+msgstr ""
+
+#. module: base_tier_validation
 #. openerp-web
 #: code:addons/base_tier_validation/static/src/xml/systray.xml:0
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_review__status__pending
@@ -370,6 +382,11 @@ msgstr ""
 #: model:ir.model.fields.selection,name:base_tier_validation.selection__tier_review__status__rejected
 msgid "Rejected"
 msgstr "Rifiutato"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__rejected_message
+msgid "Rejected Message"
+msgstr ""
 
 #. module: base_tier_validation
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__res_id
@@ -492,6 +509,12 @@ msgstr ""
 
 #. module: base_tier_validation
 #: code:addons/base_tier_validation/models/tier_validation.py:0
+#, python-format
+msgid "This %s needs to be validated"
+msgstr ""
+
+#. module: base_tier_validation
+#: code:addons/base_tier_validation/models/tier_validation.py:0
 #, fuzzy, python-format
 msgid ""
 "This action needs to be validated for at least one record. Reviews pending:\n"
@@ -545,6 +568,11 @@ msgid "Tier Validations"
 msgstr "Livelli Validazione"
 
 #. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__to_validate_message
+msgid "To Validate Message"
+msgstr ""
+
+#. module: base_tier_validation
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_review__todo_by
 #, fuzzy
 msgid "Todo By"
@@ -581,6 +609,11 @@ msgstr "Avallo Negato"
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__validated
 msgid "Validated"
 msgstr "Avallato"
+
+#. module: base_tier_validation
+#: model:ir.model.fields,field_description:base_tier_validation.field_tier_validation__validated_message
+msgid "Validated Message"
+msgstr ""
 
 #. module: base_tier_validation
 #: model:ir.model.fields,field_description:base_tier_validation.field_tier_definition__review_type
