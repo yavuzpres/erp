@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="mrp_production_tree_view_yavuzpres" model="ir.ui.view">
+        <field name="name">mrp.production.tree.view.yavuzpres</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='reservation_state']" position="after">
+                <field name="qty_produced"/>
+                <field name="qty_remaining"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,110 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_request_tier_validation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-07 09:45+0000\n"
+"PO-Revision-Date: 2023-04-07 09:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_request_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_request_tier_validation.view_purchase_request_form_inherit_tier
+msgid ""
+"<i class=\"fa fa-info-circle\"/>This Purchase Request needs to be\n"
+"                        validated."
+msgstr ""
+"<i class=\"fa fa-info-circle\"/>Bu Satınalma Talebine doğrulama\n"
+"                        gerekiyor."
+
+#. module: purchase_request_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_request_tier_validation.view_purchase_request_form_inherit_tier
+msgid "<i class=\"fa fa-thumbs-down\"/> Operation has been <b>rejected</b>."
+msgstr "<i class=\"fa fa-thumbs-down\"/> İşlem <b>reddedildi</b>."
+
+#. module: purchase_request_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_request_tier_validation.view_purchase_request_form_inherit_tier
+msgid "<i class=\"fa fa-thumbs-up\"/> Operation has been <b>validated</b>!"
+msgstr "<i class=\"fa fa-thumbs-up\"/> İşlem <b>doğrulandı</b>!"
+
+#. module: purchase_request_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_request_tier_validation.view_purchase_request_form_inherit_tier
+msgid "Confirm"
+msgstr "Onay"
+
+#. module: purchase_request_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_request_tier_validation.tier_review_form_wiz
+msgid "Dismiss"
+msgstr "Reddet"
+
+#. module: purchase_request_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_request_tier_validation.view_purchase_request_filter
+msgid "My Purchases to review"
+msgstr "Değerlendirmem Gereken Satınalma Talepleri"
+
+#. module: purchase_request_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_request_tier_validation.view_purchase_request_filter
+msgid "Need actions"
+msgstr "Eylem gerekli"
+
+#. module: purchase_request_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_request_tier_validation.view_purchase_request_filter
+msgid "Needs my Review"
+msgstr "Onay Bekliyor"
+
+#. module: purchase_request_tier_validation
+#: model:tier.definition,name:purchase_request_tier_validation.purchase_request_default_tier_definition
+msgid "New Tier Validation"
+msgstr "Yeni Katman Onayı"
+
+#. module: purchase_request_tier_validation
+#: model:ir.model,name:purchase_request_tier_validation.model_purchase_request
+msgid "Purchase Request"
+msgstr "Satınalma Talebi"
+
+#. module: purchase_request_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_request_tier_validation.view_purchase_request_filter
+msgid "Purchase Requests validated and ready to be confirmed"
+msgstr "Satınalma Talepleri onaylandı ve doğrulanmaya hazır"
+
+#. module: purchase_request_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_request_tier_validation.view_purchase_request_form_inherit_tier
+msgid "Reject"
+msgstr "Reddet"
+
+#. module: purchase_request_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_request_tier_validation.view_purchase_request_form_inherit_tier
+msgid "Request Validation"
+msgstr "Onay İste"
+
+#. module: purchase_request_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_request_tier_validation.view_purchase_request_form_inherit_tier
+msgid "Restart Validation"
+msgstr "Onay İsteğini Geri Çek"
+
+#. module: purchase_request_tier_validation
+#: model:ir.model,name:purchase_request_tier_validation.model_tier_definition
+msgid "Tier Definition"
+msgstr "Katman Tanımı"
+
+#. module: purchase_request_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_request_tier_validation.tier_review_form_wiz
+msgid "Tier Review"
+msgstr "Katman Değerlendirme"
+
+#. module: purchase_request_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_request_tier_validation.view_purchase_request_form_inherit_tier
+msgid "Validate"
+msgstr "Onayla"
+
+#. module: purchase_request_tier_validation
+#: model_terms:ir.ui.view,arch_db:purchase_request_tier_validation.view_purchase_request_filter
+msgid "Validated"
+msgstr "Onaylandı"
